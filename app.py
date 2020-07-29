@@ -1,4 +1,4 @@
-from bot import Bot
+from business.bot_business import Bot
 
 if __name__ == '__main__':
     obj_run = Bot()
