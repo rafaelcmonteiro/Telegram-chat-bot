@@ -1,6 +1,7 @@
 import telepot
 from telepot.loop import MessageLoop
-from business import check_business, multiplication_business as mt
+from business import multiplication_business as mt
+from business.check_business import Check
 
 
 class Bot:
@@ -12,13 +13,13 @@ class Bot:
         content_type, chat_type, chat_id = telepot.glance(msg)
 
         # Check if has any special characters and remove them.
-        msg = check_business.bot_treat_msg(msg['text'])
+        msg = Check.bot_treat_msg(msg['text'])
 
         if msg == 'Ola' or msg == 'Bom dia' or msg == 'Boa tarde' or msg == 'Calculadora':
             self.bot.sendMessage(chat_id, 'Olá, preciso que digite dois números para que possam ser multiplicados.')
         else:
             # Check if it's a number or something else.
-            is_number = check_business.bot_accept_only_numbers(msg)
+            is_number = Check.bot_accept_only_numbers(msg)
             if is_number is True:
                 self.numbers.append(msg)
                 if len(self.numbers) == 1:
