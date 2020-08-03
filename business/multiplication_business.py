@@ -23,12 +23,11 @@ def multiplication(top_number_initial, bottom_number_initial):
     if values_to_sum[2] == '+' or str(new_result) == '0':
         # Sending for formatting.
         formatting_result = formatting_content(top_number_initial, bottom_number_initial, multiplied, new_result[::-1])
-
         return formatting_result
     else:
         result_string = f'{values_to_sum[2]}{str(new_result)[::-1]}'
         # Sending for formatting.
-        formatting_result = formatting_content(top_number_initial, bottom_number_initial, multiplied, new_result[::-1])
+        formatting_result = formatting_content(top_number_initial, bottom_number_initial, multiplied, result_string)
         return formatting_result
 
 
@@ -89,7 +88,6 @@ def check_signal(x, y):
         string_signal = '+'
     elif len(signal) == 1:
         string_signal = '-'
-
     result_list = [x, y, string_signal]
     return result_list
 
@@ -124,12 +122,7 @@ def formatting_content(x, y, list_for_add, result):
 
 
 if __name__ == '__main__':
-    multiplication('2', '2')
-    print('')
-    print('')
-    print('')
-
-    multiplication('-98765', '-12345')
+    print(multiplication('98765', '-12345'))
     print('')
     print('')
     print('')

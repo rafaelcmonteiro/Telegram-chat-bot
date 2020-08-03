@@ -31,4 +31,3 @@ if __name__ == '__main__':
     string_test = 'essa string tem um special char 1233/*-*/-*/-*....'
     # print(bot_treat_msg(string_test))
     print(Check.bot_accept_only_numbers(string_test))
-    # Do not treat '-' if it's in the first position.
