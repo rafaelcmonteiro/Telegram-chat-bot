@@ -119,26 +119,3 @@ def formatting_content(x, y, list_for_add, result):
     x_string += f"{'-' * (result_length + 1)}\n"
     x_string += f"{result}\n"
     return x_string
-
-
-if __name__ == '__main__':
-    print(multiplication('98765', '-12345'))
-    print('')
-    print('')
-    print('')
-    '''
-    multiplication('20.2', '2.2')
-    print('')
-    print('')
-    print('')
-    multiplication('-98765', '-12345')
-    print('')
-    print('')
-    print('')
-    multiplication('594', '-3242343')
-    print('')
-    print('')
-    print('')
-    '''
-    # multiplication('222.5', '100154.54')
-    # multiplication('59454545454545', '32423433454')

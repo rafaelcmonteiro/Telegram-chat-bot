@@ -6,7 +6,7 @@ from business.check_business import Check
 
 class Bot:
     def __init__(self):
-        self.bot = telepot.Bot('1259960426:AAFhrV2um-CixJ5qYkxzO-Y8AZXGOxZqco8')
+        self.bot = telepot.Bot('')
         self.numbers = []
 
     def bot_reply(self, msg):
